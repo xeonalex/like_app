@@ -1,7 +1,6 @@
 Rails.application.routes.draw do
   resources :topics do
-    resources :questions do
-    end
+    resources :questions
   end
   # resources :answers
   resources :users

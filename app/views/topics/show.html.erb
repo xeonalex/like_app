@@ -1,5 +1,8 @@
 <p id="notice"><%= notice %></p>
 
+<%= link_to 'Edit', edit_topic_path(@topic) %> |
+<%= link_to 'Back', topics_path %>
+
 <p>
   <strong>Title:</strong>
   <%= @topic.title %>
@@ -7,13 +10,14 @@
 
 <p>
   <strong>Body:</strong>
-  <%= @topic.body %>
+  <p>
+    <%= @topic.body %>
+  </p>
 </p>
-
-<%= render @topic.questions %>
 
 <h2>Add a question:</h2>
 <%= render 'questions/form' %>
 
-<%= link_to 'Edit', edit_topic_path(@topic) %> |
-<%= link_to 'Back', topics_path %>
+<%= render @topic.questions %>
+
+

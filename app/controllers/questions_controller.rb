@@ -34,7 +34,7 @@ class QuestionsController < ApplicationController
 
   def destroy
     @topic = Topic.find(params[:topic_id])
-    @question = @topic.questions.find(question_params)
+    @question = @topic.questions.find(params[:id])
     @question.destroy
     redirect_to topic_path(@topic)
   end
