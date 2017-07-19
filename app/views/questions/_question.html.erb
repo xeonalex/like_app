@@ -1,0 +1,14 @@
+<p>
+  <strong>Question:</strong>
+  <%= question.content %>
+  <%= link_to 'Destroy question', [question.topic, question],
+              method: :delete,
+              data: { confirm: 'Are you sure?' } %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= question.user %>
+</p>
+
+<hr>
